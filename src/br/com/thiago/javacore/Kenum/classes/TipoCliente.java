@@ -1,7 +1,12 @@
 package br.com.thiago.javacore.Kenum.classes;
 
 public enum TipoCliente {
-    PESSOA_FISICA(1, "Pessoa Física"),PESSOA_JURIDICA(2, "Pessoa Jurídica");
+    //constant specific class body
+    PESSOA_FISICA(1, "Pessoa Física"),PESSOA_JURIDICA(2, "Pessoa Jurídica"){
+        public String getId(){
+            return "B";
+        }
+    };
     private int tipo;
     private String nome;
 
@@ -10,19 +15,22 @@ public enum TipoCliente {
         this.nome = nome;
     }
 
-    public int getTipo() {
-        return tipo;
+
+    public String getId(){
+        return "A";
     }
 
-    public void setTipo(int tipo) {
-        this.tipo = tipo;
+    public int getTipo() {
+        return tipo;
     }
 
     public String getNome() {
         return nome;
     }
 
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
+
+
+
+
+
 }
