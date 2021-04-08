@@ -1,5 +1,7 @@
 package br.com.thiago.javacore.Rwrappers.test;
 
+import javax.swing.plaf.synth.SynthOptionPaneUI;
+
 public class WrappersTest {
     public static void main(String[] args) {
 
@@ -16,9 +18,18 @@ public class WrappersTest {
         Short shortWrapper = 1;
         Integer integerWrapper = 1;
         Long longWrapper = 10L;
-        Float floatWrapper = 10F;
+        Float floatWrapper = new Float("10");
         Double doubleWrapper = 10D;
         Character characterWrapper = 'A';
         Boolean booleanWrapper = true;
+
+        System.out.println(Character.isDigit('9'));
+        System.out.println(Character.isLetter('1'));
+        System.out.println(Character.isLetterOrDigit('#'));
+        System.out.println(Character.isUpperCase('A'));
+        System.out.println(Character.isLowerCase('A'));
+        System.out.println(Character.toUpperCase('a'));
+
+
     }
 }
